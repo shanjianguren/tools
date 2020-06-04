@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.zhao.guyu:commons:unknown">
+    <CLASSES>
+      <root url="jar://D:/mavenjar/com/zhao/guyu/commons/unknown/commons-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/mavenjar/com/zhao/guyu/commons/unknown/commons-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/mavenjar/com/zhao/guyu/commons/unknown/commons-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,8 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    url: jdbc:mysql://116.62.163.237:3306/test
+    username: root
+    password: 1234qwer
+    type: com.alibaba.druid.pool.DruidDataSource
