@@ -14,6 +14,7 @@ public class BankCodeThirdPartyServiceImpl implements BankCodeThirdPartyService 
     @Override
     public List<BankCode> getAllBank() {
         Response response=okHttpUtil.getData(UrlConstant.BANK_LIST_URL);
+
         return null;
     }
 }

@@ -1,6 +1,13 @@
 package com.zhao.guyu.commons.utlis;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.zhao.guyu.commons.constant.UrlConstant;
+import okhttp3.*;
+import org.springframework.stereotype.Component;
+
+import javax.net.ssl.*;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.security.cert.CertificateException;
@@ -8,23 +15,6 @@ import java.security.cert.X509Certificate;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
-import com.zhao.guyu.commons.constant.UrlConstant;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-import org.springframework.stereotype.Component;
 
 /**
  * Created by fyc on 2017/7/12.
@@ -279,7 +269,10 @@ public class OkHttpUtil {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Response re=getInstance().getData(UrlConstant.BANK_LIST_URL);
+        String result=re.body().string();
+        com.alibaba.fastjson.JSONArray json= JSONObject.parseArray(result);
+        System.out.println(json.get(0));
     }
 }
