@@ -29,7 +29,7 @@
       <module name="mapper" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="thirdParty" options="-parameters" />
-      <module name="tools" options="-parameters" />
+      <module name="tools" options="" />
     </option>
   </component>
 </project>
